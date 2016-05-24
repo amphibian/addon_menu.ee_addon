@@ -8,5 +8,5 @@ return array(
       'name' => 'Add-on Menu',
       'namespace' => 'Amphibian\AddonMenu',
       'settings_exist' => true,
-      'version' => '1.0.0'
+      'version' => '1.0.1'
 );

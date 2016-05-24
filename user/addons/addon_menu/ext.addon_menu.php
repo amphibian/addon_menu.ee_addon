@@ -22,7 +22,7 @@
 class Addon_menu_ext {
 
 	var $settings = array();
-	var $version = '1.0.0';
+	var $version = '1.0.1';
 	
 
 	function __construct($settings = '')
@@ -54,10 +54,11 @@ class Addon_menu_ext {
 				continue;
 			}
 			
+			
 			/*
-				We care about add-ons which have settings	
+				We care about add-ons which have settings and are not "built-in"	
 			*/
-			if($info->isInstalled() && $info->get('settings_exist'))
+			if($info->isInstalled() && $info->get('settings_exist') && empty($info->get('built_in')))
 			{
 				/*
 					Super Admins see everything	
@@ -114,7 +115,7 @@ class Addon_menu_ext {
 	    foreach($all_addons as $name => $info)
 	    {
 		    $info = ee('Addon')->get($name);
-		    if($info->isInstalled() && $info->get('settings_exist'))
+		    if($info->isInstalled() && $info->get('settings_exist') && empty($info->get('built_in')))
 		    {
 			    $addons[$name] = $info->getName();		    
 		    }
