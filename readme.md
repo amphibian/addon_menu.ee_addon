@@ -1,3 +1,5 @@
+**IMPORTANT: Add-on Menu only works in ExpressionEngine 3.1.0 through 3.3.0. Changes in subsequent versions made Add-on menu both broken and unnecessary (with the addition of custom menu management).**
+
 Add-On Menu is an extension for ExpressionEngine&reg; 3 which adds a new top-level menu to the EE control panel, giving quick access to add-ons which offer their own control panel settings and configuration screens.
 
 Via the extension settings you can control what the new menu item is labelled (**Add-Ons** by default); which add-ons you wish to exclude from the menu; and whether or not to include a link to the full Add-On Manager at the end of the menu.
